@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontak dan pemesanan Nayla's Fashion and Craft">
+    <title>Kontak dan Pemesanan | Nayla's Fashion and Craft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <a class="logo" href="index.html">
+            🌷 Nayla's Fashion & Craft
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Beranda</a>
+            <a href="tentang.html">Tentang Kami</a>
+            <a href="layanan.html">Layanan</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="kontak.html" class="active">
+                Kontak & Pemesanan
+            </a>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <section class="section">
+
+        <p class="eyebrow">
+            We'd Love to Hear from You 💌
+        </p>
+
+        <h1>
+            Kontak & Pemesanan
+        </h1>
+
+        <p class="lead">
+            Isi form di bawah untuk membuat pesanan.
+            Yuk, pilih produk favoritmu! 🌷
+        </p>
+
+        <div class="two-col">
+
+            <div class="soft-panel">
+
+                <h2>
+                    Hubungi Kami 🌷
+                </h2>
+
+                <p>
+                    📍 Cirebon, Jawa Barat
+                </p>
+
+                <p>
+                    🕘 Senin–Sabtu, 09.00–17.00
+                </p>
+
+                <p>
+                    📧 hellonaylasfashioncraft@gmail.com
+                </p>
+
+                <p>
+                    📱 Instagram: @naylas.fashioncraft
+                </p>
+
+                <p>
+                    ✨ Silakan gunakan detail kontak
+                    ini untuk melakukan pemesanan.
+                </p>
+
+            </div>
+
+            <form id="formPemesanan" action="#" method="get">
+
+                <div class="form-grid">
+
+                    <div>
+                        <label for="nama">
+                            Nama Lengkap
+                        </label>
+
+                        <input
+                            id="nama"
+                            name="nama"
+                            type="text"
+                            placeholder="Nama kamu"
+                            required>
+                    </div>
+
+                    <div>
+                        <label for="email">
+                            Email
+                        </label>
+
+                        <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            placeholder="nama@email.com"
+                            required>
+                    </div>
+
+                    <div>
+                        <label for="telepon">
+                            Nomor Telepon
+                        </label>
+
+                        <input
+                            id="telepon"
+                            name="telepon"
+                            type="tel"
+                            placeholder="08xxxxxxxxxx"
+                            pattern="[0-9]{10,15}"
+                            required>
+                    </div>
+
+                    <div>
+                        <label for="produk">
+                            Pilih Produk
+                        </label>
+
+                        <select
+                            id="produk"
+                            name="produk"
+                            required>
+
+                            <option value="">
+                                -- pilih produk --
+                            </option>
+
+                            <option>Blus Pastel</option>
+                            <option>Dress Floral</option>
+                            <option>Tote Bag Craft</option>
+                            <option>Scrunchie Handmade</option>
+
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="jumlah">
+                            Jumlah
+                        </label>
+
+                        <input
+                            id="jumlah"
+                            name="jumlah"
+                            type="number"
+                            min="1"
+                            value="1"
+                            required>
+                    </div>
+
+                    <div>
+                        <label for="warna">
+                            Pilihan Warna
+                        </label>
+
+                        <select
+                            id="warna"
+                            name="warna">
+
+                            <option>Pink Soft</option>
+                            <option>Hijau Soft</option>
+                            <option>Krem</option>
+                            <option>Lavender</option>
+
+                        </select>
+                    </div>
+
+                    <div class="full">
+                        <label for="alamat">
+                            Alamat Pengiriman
+                        </label>
+
+                        <textarea
+                            id="alamat"
+                            name="alamat"
+                            placeholder="Tulis alamat lengkap..."
+                            required></textarea>
+                    </div>
+
+                    <div class="full">
+                        <label for="catatan">
+                            Catatan Pesanan (Opsional)
+                        </label>
+
+                        <textarea
+                            id="catatan"
+                            name="catatan"
+                            placeholder="Ukuran, varian, atau pesan tambahan"></textarea>
+                    </div>
+
+                    <div class="full">
+                        <button class="btn" type="submit">
+                            Kirim Pesanan 💗
+                        </button>
+                    </div>
+
+                    <div class="full">
+                        <p id="pesanSukses" class="pesan-sukses">
+                            🎉 Pesanan Berhasil Terkirim! 💗
+                            <br>
+                            Terima kasih sudah berbelanja di
+                            Nayla's Fashion and Craft.
+                            Pesanan kamu akan segera kami proses. 🌷
+                        </p>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    🌸 Nayla's Fashion and Craft
+    · Karya Lokal, Gaya Penuh Cerita 🤍
+</footer>
+
+<script>
+
+    const formPemesanan = document.getElementById("formPemesanan");
+
+    const pesanSukses = document.getElementById("pesanSukses");
+
+    formPemesanan.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        if (formPemesanan.checkValidity()) {
+
+            pesanSukses.style.display = "block";
+
+            formPemesanan.reset();
+
+        } else {
+
+            formPemesanan.reportValidity();
+
+        }
+
+    });
+
+</script>
+
+</body>
+</html>
